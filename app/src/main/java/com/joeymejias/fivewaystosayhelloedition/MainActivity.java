@@ -9,12 +9,19 @@ import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    /*
+    ** Global variables for the views
+     */
     RelativeLayout chinese;
     RelativeLayout spanish;
     RelativeLayout urdu;
     RelativeLayout arabic;
     RelativeLayout portuguese;
 
+    /*
+    ** Global variables for buttons
+     */
     Button chineseButton;
     Button spanishButton;
     Button urduButton;
@@ -26,18 +33,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*
+        ** Setting view global variables to view ids
+         */
         chinese = (RelativeLayout) findViewById(R.id.chinese);
         spanish = (RelativeLayout) findViewById(R.id.spanish);
         urdu = (RelativeLayout) findViewById(R.id.urdu);
         arabic = (RelativeLayout) findViewById(R.id.arabic);
         portuguese = (RelativeLayout) findViewById(R.id.portuguese);
 
+        /*
+        ** Setting button global variables to button ids
+         */
         chineseButton = (Button) findViewById(R.id.chinese_button);
         spanishButton = (Button) findViewById(R.id.spanish_button);
         urduButton = (Button) findViewById(R.id.urdu_button);
         arabicButton = (Button) findViewById(R.id.arabic_button);
         portugueseButton = (Button) findViewById(R.id.portuguese_button);
 
+        /*
+        ** Setting buttons to start the activities for the chosen language
+         */
         chineseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +90,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /*
+    ** Starting the activity of desired language chosen
+     */
     private void startChinese() {
         Intent intent = new Intent(this, ChineseActivity.class);
         startActivity(intent);

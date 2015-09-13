@@ -13,15 +13,19 @@ public class ArabicActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_arabic);
+        setContentView(R.layout.activity_arabic); //Setting view to activity_arabic.xml
 
-        String url = "http://www.wikihow.com/Say-Hello-in-Arabic";
-        WebView view = (WebView) this.findViewById(R.id.arabicWebView);
-        view.getSettings().setJavaScriptEnabled(true);
-        view.setWebViewClient(new Callback());
-        view.loadUrl(url);
+        String url = "http://www.wikihow.com/Say-Hello-in-Arabic"; //URL of the web page that contains the Arabic content
+        WebView view = (WebView) this.findViewById(R.id.arabicWebView); //Setting the WebView to arabicWebView
+        view.getSettings().setJavaScriptEnabled(true); //Enabling JavaScript on the web page in the event the user browses content that requires JavaScript
+        view.setWebViewClient(new Callback()); //Setting the webview to open natively
+        view.loadUrl(url); //Loading the URL
     }
 
+
+    /*
+    ** Setting the webview to open natively
+     */
     private class Callback extends WebViewClient {
 
         @Override
