@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Sets background color of status bar -->
+        <item name="colorPrimaryDark">#6D855E</item>
+        <!-- Customize your theme here. -->
+        <item name="colorButtonNormal">#6D855E</item>
+    </style>
+
+</resources>

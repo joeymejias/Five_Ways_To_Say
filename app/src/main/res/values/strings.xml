@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Five Ways To Say - Hello Edition</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="chinese">Chinese</string>
+    <string name="spanish">Spanish</string>
+    <string name="urdu">Urdu</string>
+    <string name="arabic">Arabic</string>
+    <string name="portuguese">Portuguese</string>
+
+    <string name="app_intro">Welcome to\nFive Ways to Say:\nHello Edition!</string>
+    <string name="app_text">\n\nSelect the language of your choice and learn to say hello in 5 different ways!\n\n</string>
+
+    <string name="chinese_button">Chinese</string>
+    <string name="spanish_button">Spanish</string>
+    <string name="urdu_button">Urdu</string>
+    <string name="arabic_button">Arabic</string>
+    <string name="portuguese_button">Portuguese</string>
+
+    <string name="app_credits">Credits: Web content is the property of wikiHow.com</string>
+</resources>
