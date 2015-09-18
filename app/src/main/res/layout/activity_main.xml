@@ -104,11 +104,57 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_below="@id/portuguese_button"
+        android:text="@string/app_help"
+        android:id="@+id/app_help"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:textColor="#444F45"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_help"
+            android:id="@+id/feedback_buttons">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/yes_button"
+                android:id="@+id/yes_button"
+                android:onClick="yesOnClick"
+                android:textAlignment="center"
+                android:paddingTop="24dp"
+                android:paddingBottom="24dp"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/no_button"
+                android:id="@+id/no_button"
+                android:onClick="noOnClick"
+                android:textAlignment="center"
+                android:paddingTop="24dp"
+                android:paddingBottom="24dp"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/feedback_buttons"
         android:text="@string/app_credits"
         android:id="@+id/app_credits"
         android:textSize="12sp"
         android:gravity="center_horizontal"
-        android:textColor="#444F45"/>
+        android:background="#93B874"
+        android:textColor="#FFFFFF"/>
 
 </RelativeLayout>
 

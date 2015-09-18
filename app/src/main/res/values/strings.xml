@@ -8,6 +8,7 @@
     <string name="urdu">Urdu</string>
     <string name="arabic">Arabic</string>
     <string name="portuguese">Portuguese</string>
+    <string name="language">Language</string>
 
     <string name="app_intro">Welcome to\nFive Ways to Say:\nHello Edition!</string>
     <string name="app_text">\n\nSelect the language of your choice and learn to say hello in 5 different ways!\n\n</string>
@@ -17,6 +18,10 @@
     <string name="urdu_button">Urdu</string>
     <string name="arabic_button">Arabic</string>
     <string name="portuguese_button">Portuguese</string>
+
+    <string name="app_help">Is this app helpful?</string>
+    <string name="yes_button">Yes</string>
+    <string name="no_button">No</string>
 
     <string name="app_credits">Credits: Web content is the property of wikiHow.com</string>
 </resources>

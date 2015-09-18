@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import static com.joeymejias.fivewaystosayhelloedition.R.id.yes_button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     Button urduButton;
     Button arabicButton;
     Button portugueseButton;
+    Button yesButton;
+    Button noButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
         urduButton = (Button) findViewById(R.id.urdu_button);
         arabicButton = (Button) findViewById(R.id.arabic_button);
         portugueseButton = (Button) findViewById(R.id.portuguese_button);
+
+        yesButton = (Button) findViewById(yes_button);
+        noButton = (Button) findViewById(R.id.no_button);
+
 
         /*
         ** Setting buttons to start the activities for the chosen language
@@ -88,11 +97,14 @@ public class MainActivity extends AppCompatActivity {
                 startPortuguese();
             }
         });
+
+
+        yesButton.setOnClickListener(feedbackListener(true));
+
+        noButton.setOnClickListener(feedbackListener(false));
+
     }
 
-    /*
-    ** Starting the activity of desired language chosen
-     */
     private void startChinese() {
         Intent intent = new Intent(this, ChineseActivity.class);
         startActivity(intent);
@@ -116,5 +128,27 @@ public class MainActivity extends AppCompatActivity {
     private void startPortuguese() {
         Intent intent = new Intent(this, PortugueseActivity.class);
         startActivity(intent);
+
+    }
+
+    private View.OnClickListener feedbackListener(final boolean feedback) {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startFeedback(feedback);
+            }
+        };
+    }
+
+    /*
+    ** If statement for feedback toast
+    */
+
+    private void startFeedback(boolean feedback) {
+        if (feedback) {
+            Toast.makeText(MainActivity.this, "Thank you for your feedback!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(MainActivity.this, "We are working to make this app better!", Toast.LENGTH_SHORT).show();
+        }
     }
 }

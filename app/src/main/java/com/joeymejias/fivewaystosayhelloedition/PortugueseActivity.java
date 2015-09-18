@@ -23,7 +23,7 @@ public class PortugueseActivity extends AppCompatActivity {
     }
 
     /*
-    ** Setting the webview to open natively
+    ** Setting the webViewClient to open natively
     */
     private class Callback extends WebViewClient {
 
@@ -34,3 +34,4 @@ public class PortugueseActivity extends AppCompatActivity {
 
     }
 }
+
