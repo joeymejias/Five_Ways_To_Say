@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /*
-    ** Global variables for the views
+    ** Member variables for the views
      */
     RelativeLayout chinese;
     RelativeLayout spanish;
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     RelativeLayout portuguese;
 
     /*
-    ** Global variables for buttons
+    ** Member variables for buttons
      */
     Button chineseButton;
     Button spanishButton;
@@ -143,7 +143,6 @@ public class MainActivity extends AppCompatActivity {
     /*
     ** If statement for feedback toast
     */
-
     private void startFeedback(boolean feedback) {
         if (feedback) {
             Toast.makeText(MainActivity.this, "Thank you for your feedback!", Toast.LENGTH_SHORT).show();
